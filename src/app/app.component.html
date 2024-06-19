@@ -1,0 +1,39 @@
+<div class="container">
+  <h1>La scaloneta usando Bootstrap 4 en Angular15</h1>
+  <br>
+  <div class="mb-3">
+    <button type="button" class="btn btn-outline-success" (click)="filtrarPorPosicion('DEL')">Delanteros</button>
+    <button type="button" class="btn btn-outline-success" (click)="filtrarPorPosicion('MED')">Mediocampistas</button>
+    <button type="button" class="btn btn-outline-success" (click)="filtrarPorPosicion('DEF')">Defensores</button>
+    <button type="button" class="btn btn-outline-success" (click)="filtrarPorPosicion('ARQ')">Arqueros</button>
+    <button class="btn btn-secondary ml-2" (click)="mostrarTodo()">Mostrar Todos</button>
+    <button type="button" class="btn btn-outline-success" (click)="eliminaAbuelo()">Elimina Mayor</button>
+  </div>
+  <br>
+</div>
+
+<div class="container">
+  <div class="tabla">
+    <table class="table table-bordered">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Nombre</th>
+          <th scope="col">Apellido</th>
+          <th scope="col">Edad</th>
+          <th scope="col">Posición</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let jugador of posicionSeleccionada">
+          <td>{{ jugador.nombre }}</td>
+          <td>{{ jugador.apellido }}</td>
+          <td>{{ jugador.edad }}</td>
+          <td>{{ jugador.posicion }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <div>
+      <h5>"la edad promedio es:"{{ edadPromedio | number:'1.0-0' }}</h5>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+.container {
+  margin: 50px auto;
+  max-width: 600px;
+  padding: 20px;
+}
+.table{
+  border-radius: 20%;
+}
